@@ -1,0 +1,29 @@
+# f28hs-2023-24-sysprg-tut2-led
+
+C source code and documentation on how to make an LED, wired up to a Raspberry Pi, blink
+
+Use this repo together with the following lab sheet: [Labsheet LED](http://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/LabSheet24_LedButton.pdf)
+
+This builds on the [Tutorial 2 of SysPrg in F28HS](http://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/slides24_SysPrg_Tut2.pdf).
+
+## Wiring
+
+An **LED**, as output device, should be connected to the RPi2 using **GPIO pin 12.**
+You will need a resistor to control the input to the LED.
+
+The Fritzing diagram below visualises this wiring. You can ignore the button and second resistor on the right hand side (we'll use them in the next lab).
+
+![Fritzing Diagram](fritz_Button_LED_bb.png "Fritzing Diagram with LED and Button")
+
+## Task: Developing a C program for a blinking LED (Week 3)}
+
+The first task of this lab is to write a C program to make
+an LED blink in the same way as discussed in class for the on-chip ACT LED (pin 47).
+The LED should be connected via the breadboard to **pin 12**.
+The code needs to configure this pin for output, and then in a loop
+turn the LED on/off, with a fixed delay between state changes.
+
+Start from the sample code in this repo: `tut\_led.c`, which implements this control for the ACT LED (pin 47). You will have
+to change the code to work with pin 12, as discussed in the
+[Tutorial 2 slides](http://www.macs.hw.ac.uk/~hwloidl/Courses/F28HS/slides24_SysPrg_Tut2.pdf), discussing LEDs
+
